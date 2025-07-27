@@ -716,7 +716,7 @@
 
       <div class="contact-form">
         <h3>Free Case Evaluation Form</h3>
-        <form action="#" method="post">
+        <form id="consultationForm" action="https://formspree.io/f/mrblqwzy" method="POST">
           <div class="form-group">
             <label for="name">Full Name *</label>
             <input type="text" id="name" name="name" required>
@@ -761,6 +761,7 @@
 
           <button type="submit" class="submit-btn">Get Free Consultation</button>
         </form>
+        <div id="formMessage" style="display: none; margin-top: 20px; padding: 10px; border-radius: 5px;"></div>
       </div>
 
       <div class="highlight-box">
@@ -827,5 +828,36 @@
       <p>Please do not include any confidential or sensitive information in a contact form. Submitting a contact form does not create an attorney-client relationship.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('consultationForm').addEventListener('submit', function(e) {
+      const form = this;
+      const submitBtn = form.querySelector('.submit-btn');
+      const messageDiv = document.getElementById('formMessage');
+      
+      // Disable submit button
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+      
+      // Hide any previous messages
+      messageDiv.style.display = 'none';
+      
+      // Let the form submit normally to Formspree
+      // Formspree will handle the submission and redirect
+      
+      // Show success message after a short delay
+      setTimeout(() => {
+        messageDiv.textContent = 'Form submitted successfully! We will contact you soon.';
+        messageDiv.style.display = 'block';
+        messageDiv.style.backgroundColor = '#d4edda';
+        messageDiv.style.color = '#155724';
+        messageDiv.style.border = '1px solid #c3e6cb';
+        
+        // Re-enable submit button
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Get Free Consultation';
+      }, 1000);
+    });
+  </script>
 </body>
 </html> 
