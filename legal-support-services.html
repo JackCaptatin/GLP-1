@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Support Services - GLP-1 Drugs Side Effects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1a202c;
+      background-color: #ffffff;
+      font-size: 16px;
+    }
+
+    .phone-bar {
+      background: #dc2626;
+      color: #fff;
+      text-align: center;
+      padding: 0.75rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .phone-bar a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      color: #fff;
+      padding: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-top: 3.5rem;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .back-link {
+      color: #bfdbfe;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    nav {
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1rem 0;
+      position: sticky;
+      top: 3.5rem;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      background: #e2e8f0;
+      color: #1e40af;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #1e3a8a;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: #1e40af;
+      border-radius: 2px;
+    }
+
+    .content-module {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .content-module h3 {
+      color: #1e3a8a;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .content-module p {
+      color: #64748b;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+      border: 1px solid #93c5fd;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .highlight-box h3 {
+      color: #1e3a8a;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .highlight-box p {
+      color: #374151;
+      margin: 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .service-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .service-card h4 {
+      color: #1e3a8a;
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .service-card p {
+      color: #64748b;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .team-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .team-card h4 {
+      color: #1e3a8a;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .team-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .step-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      position: relative;
+    }
+
+    .step-number {
+      background: #1e40af;
+      color: #fff;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .step-card h4 {
+      color: #1e3a8a;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-card p {
+      color: #64748b;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .contact-form {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.2s ease;
+      font-family: inherit;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #1e40af;
+      box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .submit-btn {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+      color: #fff;
+      padding: 0.875rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+    }
+
+    .testimonial-box {
+      background: #f0f9ff;
+      border: 1px solid #0ea5e9;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .testimonial-box h3 {
+      color: #0369a1;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .testimonial-box p {
+      color: #0c4a6e;
+      margin: 0;
+      font-style: italic;
+    }
+
+    ul, ol {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      color: #64748b;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 3rem 2rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-section h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #bfdbfe;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      text-decoration: none;
+    }
+
+    .footer-section a:hover {
+      color: #bfdbfe;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #374151;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .header-container,
+      .nav-container,
+      main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .services-grid,
+      .team-grid,
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed Phone Number Bar -->
+  <div class="phone-bar">
+    <a href="tel:800-553-8082">📞 FREE CASE EVALUATION: 800-553-8082</a>
+  </div>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="back-link">← Back to Home</a>
+      <h1>Legal Support Services</h1>
+      <p>Expert legal representation for victims of GLP-1 medication side effects. Our experienced team is dedicated to holding pharmaceutical companies accountable and securing justice for injured patients.</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <a href="#about">About Our Firm</a>
+      <a href="#services">Legal Services</a>
+      <a href="#team">Our Team</a>
+      <a href="#process">Legal Process</a>
+      <a href="#cases">Case Types</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- About Our Firm Section -->
+    <section id="about">
+      <h2>About Our Legal Team</h2>
+      
+      <div class="content-module">
+        <h3>Dedicated to Pharmaceutical Justice</h3>
+        <p>We are a North American law firm devoted to holding pharmaceutical companies accountable when their products cause harm. With extensive experience litigating cases involving dangerous drugs, our attorneys are committed to seeking justice for people who have suffered injuries or illnesses after taking GLP-1 medications.</p>
+        
+        <p>Our legal team understands the complex medical and regulatory issues surrounding weight‑loss and diabetes drugs. We collaborate with medical experts to investigate side effects and build strong cases. If you or a loved one has experienced severe nausea, vomiting, gastrointestinal problems or other complications after taking Ozempic, Wegovy, Mounjaro, Zepbound or similar medications, we are here to help.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">25+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">$500M+</div>
+          <div class="stat-label">Recovered for Clients</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">1,000+</div>
+          <div class="stat-label">Cases Handled</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Our Commitment</h3>
+        <p>We provide compassionate guidance, thorough case evaluation and vigorous representation to help clients obtain compensation and support for their injuries and medical expenses. Our team works tirelessly to ensure that victims of pharmaceutical negligence receive the justice they deserve.</p>
+      </div>
+    </section>
+
+    <!-- Legal Services Section -->
+    <section id="services">
+      <h2>Our Legal Services</h2>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>Product Liability Litigation</h4>
+          <p>We handle cases involving defective pharmaceutical products, including drugs that cause unexpected and dangerous side effects. Our team has successfully litigated numerous product liability cases against major pharmaceutical companies.</p>
+        </div>
+        
+        <div class="service-card">
+          <h4>Mass Tort Litigation</h4>
+          <p>We represent clients in mass tort cases involving GLP-1 medications. These cases are often consolidated in multidistrict litigation (MDL) to streamline the legal process and maximize recovery for victims.</p>
+        </div>
+        
+        <div class="service-card">
+          <h4>Pharmaceutical Litigation</h4>
+          <p>Our attorneys specialize in cases involving dangerous drugs and medical devices. We have extensive experience with FDA regulations, clinical trial data, and pharmaceutical industry practices.</p>
+        </div>
+        
+        <div class="service-card">
+          <h4>Personal Injury Claims</h4>
+          <p>We help clients recover compensation for medical expenses, lost wages, pain and suffering, and other damages caused by pharmaceutical injuries. Our team works to ensure full and fair compensation.</p>
+        </div>
+        
+        <div class="service-card">
+          <h4>Wrongful Death Cases</h4>
+          <p>When pharmaceutical negligence results in death, we help families seek justice and compensation. We understand the emotional and financial impact of losing a loved one and provide compassionate representation.</p>
+        </div>
+        
+        <div class="service-card">
+          <h4>Class Action Lawsuits</h4>
+          <p>We represent groups of individuals harmed by the same pharmaceutical product. Class actions can be an effective way to hold companies accountable and secure compensation for multiple victims.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team">
+      <h2>Our Legal Team</h2>
+      
+      <div class="content-module">
+        <h3>Experienced Attorneys</h3>
+        <p>Our legal team consists of experienced attorneys who specialize in pharmaceutical litigation and have successfully represented thousands of clients harmed by dangerous drugs. We have the knowledge, resources, and dedication to take on major pharmaceutical companies.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <h4>Senior Partners</h4>
+          <p>Our senior partners have over 25 years of experience in pharmaceutical litigation and have recovered hundreds of millions of dollars for injured clients.</p>
+        </div>
+        
+        <div class="team-card">
+          <h4>Medical Experts</h4>
+          <p>We work with leading medical experts who help us understand the complex medical issues involved in GLP-1 side effect cases.</p>
+        </div>
+        
+        <div class="team-card">
+          <h4>Litigation Specialists</h4>
+          <p>Our litigation team specializes in complex pharmaceutical cases and has extensive experience with mass tort litigation.</p>
+        </div>
+        
+        <div class="team-card">
+          <h4>Client Advocates</h4>
+          <p>Our client advocates ensure that every client receives personalized attention and support throughout the legal process.</p>
+        </div>
+      </div>
+
+      <div class="testimonial-box">
+        <h3>Client Testimonial</h3>
+        <p>"The legal team was incredibly professional and compassionate throughout my entire case. They fought hard for me and my family, and we received a settlement that has helped us move forward with our lives. I highly recommend their services to anyone dealing with GLP-1 medication injuries."</p>
+      </div>
+    </section>
+
+    <!-- Legal Process Section -->
+    <section id="process">
+      <h2>Our Legal Process</h2>
+      
+      <div class="content-module">
+        <h3>How We Help You</h3>
+        <p>We understand that dealing with a pharmaceutical injury can be overwhelming. Our streamlined process is designed to make the legal journey as smooth as possible while ensuring you receive the compensation you deserve.</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h4>Free Consultation</h4>
+          <p>We offer a free, confidential consultation to evaluate your case. During this initial meeting, we'll discuss your injuries, medical history, and determine if you have a valid claim.</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h4>Case Investigation</h4>
+          <p>Our team conducts a thorough investigation, gathering medical records, consulting with experts, and building a strong case to support your claim for compensation.</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h4>Filing Your Claim</h4>
+          <p>We handle all the legal paperwork and filing requirements. Your case may be filed individually or as part of a mass tort litigation, depending on the circumstances.</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h4>Negotiation & Litigation</h4>
+          <p>We negotiate with pharmaceutical companies and their insurance carriers. If a fair settlement cannot be reached, we're prepared to take your case to trial.</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <h4>Resolution & Recovery</h4>
+          <p>We work to secure the maximum compensation possible for your injuries, medical expenses, lost wages, and pain and suffering.</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">6</div>
+          <h4>Ongoing Support</h4>
+          <p>We provide ongoing support throughout the process and are available to answer any questions you may have about your case or the legal process.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Types Section -->
+    <section id="cases">
+      <h2>Types of Cases We Handle</h2>
+      
+      <div class="content-module">
+        <h3>GLP-1 Medication Injuries</h3>
+        <p>We represent clients who have suffered serious side effects from GLP-1 medications, including Ozempic, Wegovy, Mounjaro, Zepbound, and similar drugs. Our team has experience with a wide range of complications:</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>Gastroparesis Cases</h4>
+          <p>Stomach paralysis requiring surgical intervention, feeding tubes, or permanent lifestyle changes. Many of our clients have required gastric pacemakers or other surgical procedures.</p>
+        </div>
+        
+        <div class="service-card">
+          <h4>Bowel Obstruction Claims</h4>
+          <p>Emergency surgeries and hospitalizations due to intestinal blockages. These cases often involve significant medical expenses and long recovery periods.</p>
+        </div>
+        
+        <div class="service-card">
+          <h4>Intestinal Tissue Death</h4>
+          <p>Cases involving necrosis requiring surgical removal of dead tissue and permanent ileostomy bags. These are among the most serious complications.</p>
+        </div>
+        
+        <div class="service-card">
+          <h4>Pancreatitis Lawsuits</h4>
+          <p>Life-threatening inflammation of the pancreas requiring hospitalization and intensive medical treatment. Some cases result in permanent organ damage.</p>
+        </div>
+        
+        <div class="service-card">
+          <h4>Vision Loss Claims</h4>
+          <p>Cases involving optic nerve damage (NAION) and other vision complications. These injuries can be permanent and significantly impact quality of life.</p>
+        </div>
+        
+        <div class="service-card">
+          <h4>Mental Health Issues</h4>
+          <p>Cases involving depression, suicidal thoughts, and other mental health complications linked to GLP-1 medication use.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Current Litigation Status</h3>
+        <p>As of June 2025, there are 1,882 active lawsuits consolidated in the GLP-1 MDL (Multidistrict Litigation) in the Eastern District of Pennsylvania. Our firm is actively representing clients in this litigation and has extensive experience with the specific legal and medical issues involved.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Get Your Free Consultation</h2>
+      
+      <div class="content-module">
+        <h3>Start Your Case Today</h3>
+        <p>If you or a loved one has experienced serious side effects from GLP-1 medications, don't wait to get the legal help you deserve. Our team offers free consultations and works on a contingency fee basis - you only pay if we win your case.</p>
+      </div>
+
+      <div class="contact-form">
+        <h3>Free Case Evaluation Form</h3>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label for="medication">Which medication did you take?</label>
+            <select id="medication" name="medication">
+              <option value="">Select medication</option>
+              <option value="ozempic">Ozempic</option>
+              <option value="wegovy">Wegovy</option>
+              <option value="mounjaro">Mounjaro</option>
+              <option value="zepbound">Zepbound</option>
+              <option value="other">Other GLP-1 medication</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="side-effects">What side effects did you experience?</label>
+            <textarea id="side-effects" name="side-effects" rows="4" placeholder="Please describe your symptoms, when they started, and how they have affected your life..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="medical-treatment">Have you received medical treatment for these side effects?</label>
+            <select id="medical-treatment" name="medical-treatment">
+              <option value="">Select option</option>
+              <option value="yes">Yes, I have received treatment</option>
+              <option value="no">No, but I plan to seek treatment</option>
+              <option value="unsure">I'm not sure</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-btn">Get Free Consultation</button>
+        </form>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Why Choose Our Firm?</h3>
+        <ul>
+          <li><strong>Free Consultation:</strong> No upfront costs to discuss your case</li>
+          <li><strong>Contingency Fees:</strong> You only pay if we win your case</li>
+          <li><strong>Nationwide Representation:</strong> We serve clients across the United States</li>
+          <li><strong>Experienced Attorneys:</strong> Specialized in pharmaceutical litigation</li>
+          <li><strong>Personal Attention:</strong> Every client receives individualized care</li>
+          <li><strong>Proven Results:</strong> Millions recovered for injured clients</li>
+        </ul>
+      </div>
+
+      <div class="content-module">
+        <h3>Contact Information</h3>
+        <p><strong>Phone:</strong> 800-553-8082 (Available 24/7)</p>
+        <p><strong>Email:</strong> info@glp1legal.com</p>
+        <p><strong>Service Area:</strong> Nationwide representation</p>
+        <p><strong>Office Hours:</strong> Monday-Friday 8:00 AM - 6:00 PM EST</p>
+        
+        <p><strong>Emergency:</strong> If you're experiencing severe symptoms, please seek immediate medical attention. Our legal team can help you with your case after you've received appropriate medical care.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p>📞 Free Case Evaluation: 800-553-8082</p>
+        <p>📍 Serving clients nationwide</p>
+        <p>⏰ Available 24/7 for consultations</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Legal Services</h3>
+        <p><a href="#">Product Liability</a></p>
+        <p><a href="#">Mass Torts</a></p>
+        <p><a href="#">Pharmaceutical Litigation</a></p>
+        <p><a href="#">Personal Injury</a></p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Side Effects</h3>
+        <p><a href="gastroparesis.html">Gastroparesis</a></p>
+        <p><a href="pancreatitis.html">Pancreatitis</a></p>
+        <p><a href="optic-nerve-damage.html">Vision Loss</a></p>
+        <p><a href="mental-health-issues.html">Mental Health</a></p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Legal Information</h3>
+        <p><a href="#">Disclaimer</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <p><a href="#">Terms of Service</a></p>
+        <p><a href="#">Attorney Advertising</a></p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 GLP‑1 Side Effects Legal Support. All rights reserved. | Free consultation available.</p>
+      <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+      <p>Please do not include any confidential or sensitive information in a contact form. Submitting a contact form does not create an attorney-client relationship.</p>
+    </div>
+  </footer>
+</body>
+</html> 

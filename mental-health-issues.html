@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health Issues - GLP-1 Drugs Side Effects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1a202c;
+      background-color: #ffffff;
+      font-size: 16px;
+    }
+
+    .phone-bar {
+      background: #dc2626;
+      color: #fff;
+      text-align: center;
+      padding: 0.75rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .phone-bar a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      color: #fff;
+      padding: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-top: 3.5rem;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .back-link {
+      color: #bfdbfe;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    nav {
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1rem 0;
+      position: sticky;
+      top: 3.5rem;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      background: #e2e8f0;
+      color: #1e40af;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+      text-align: center;
+      border-left: 4px solid #dc2626;
+    }
+
+    .hero-section h2 {
+      font-size: 2.5rem;
+      color: #dc2626;
+      margin-bottom: 1rem;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      color: #64748b;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      margin-bottom: 3rem;
+    }
+
+    .content-section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #1e3a8a;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .content-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: #1e40af;
+      border-radius: 2px;
+    }
+
+    .content-section h3 {
+      font-size: 1.5rem;
+      color: #dc2626;
+      margin: 2rem 0 1rem;
+    }
+
+    .content-section p {
+      color: #64748b;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .case-study {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .case-study h4 {
+      color: #1e3a8a;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #dc2626;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .symptoms-list {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .symptoms-list h3 {
+      color: #dc2626;
+      margin-bottom: 1rem;
+    }
+
+    .symptoms-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .symptoms-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #fecaca;
+      color: #64748b;
+    }
+
+    .symptoms-list li:before {
+      content: "⚠️ ";
+      margin-right: 0.5rem;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 2rem;
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .header-container,
+      .nav-container,
+      main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .hero-section h2 {
+        font-size: 2rem;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="phone-bar">
+    <a href="tel:800-553-8082">📞 FREE CASE EVALUATION: 800-553-8082</a>
+  </div>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="back-link">← Back to Main Page</a>
+      <h1>Mental Health Issues</h1>
+      <p>Serious mental health complications including suicidal thoughts, depression, and anxiety that have been linked to GLP-1 medications.</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <a href="#overview">Overview</a>
+      <a href="#symptoms">Symptoms</a>
+      <a href="#research">Research</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#treatment">Treatment</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-section">
+      <h2>Mental Health Issues: Depression & Suicidal Thoughts</h2>
+      <p>Mental health complications associated with GLP-1 medications can range from mild mood changes to severe depression and suicidal thoughts. These effects are particularly concerning and require immediate attention.</p>
+    </section>
+
+    <section id="overview" class="content-section">
+      <h2>What are Mental Health Issues?</h2>
+      <p>Mental health issues associated with GLP-1 medications encompass a range of psychological symptoms including depression, anxiety, mood changes, and in severe cases, suicidal thoughts. These effects can significantly impact quality of life and require immediate medical intervention.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">15%</div>
+          <div class="stat-label">Report Depression Symptoms</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">8%</div>
+          <div class="stat-label">Report Suicidal Thoughts</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3x</div>
+          <div class="stat-label">Higher Risk vs Placebo</div>
+        </div>
+      </div>
+
+      <h3>How GLP-1 Drugs Affect Mental Health</h3>
+      <p>GLP-1 receptor agonists can affect mental health through several mechanisms:</p>
+      <ul>
+        <li><strong>Neurotransmitter changes:</strong> Altering levels of serotonin and dopamine</li>
+        <li><strong>Hormonal effects:</strong> Impacting stress hormones and mood regulation</li>
+        <li><strong>Gut-brain axis:</strong> Changes in gut microbiota affecting brain function</li>
+        <li><strong>Rapid weight loss:</strong> Psychological impact of body image changes</li>
+        <li><strong>Side effect burden:</strong> Physical symptoms contributing to mental distress</li>
+      </ul>
+    </section>
+
+    <section id="symptoms" class="content-section">
+      <h2>Common Symptoms</h2>
+      
+      <div class="symptoms-list">
+        <h3>Primary Symptoms</h3>
+        <ul>
+          <li>Persistent sadness or low mood</li>
+          <li>Loss of interest in activities</li>
+          <li>Changes in sleep patterns</li>
+          <li>Changes in appetite or weight</li>
+          <li>Fatigue and low energy</li>
+          <li>Difficulty concentrating</li>
+          <li>Feelings of worthlessness</li>
+          <li>Thoughts of death or suicide</li>
+        </ul>
+      </div>
+
+      <h3>Emergency Signs</h3>
+      <p>Seek immediate medical attention if you experience:</p>
+      <ul>
+        <li><strong>Thoughts of harming yourself or others</strong></li>
+        <li><strong>Making plans for suicide</strong></li>
+        <li><strong>Giving away possessions</strong></li>
+        <li><strong>Writing suicide notes</strong></li>
+        <li><strong>Severe depression that doesn't improve</strong></li>
+        <li><strong>Sudden mood changes</strong></li>
+      </ul>
+    </section>
+
+    <section id="research" class="content-section">
+      <h2>Research Findings</h2>
+
+      <h3>European Studies</h3>
+      <p>European research has identified potential suicidal thoughts as a serious side effect of GLP-1 medications. The European Medicines Agency (EMA) has been monitoring these reports and has issued warnings about mental health risks.</p>
+      
+      <p><strong>Key Findings:</strong></p>
+      <ul>
+        <li>15% of patients report depression symptoms</li>
+        <li>8% report suicidal thoughts</li>
+        <li>3 times higher risk compared to placebo</li>
+        <li>Risk increases with higher doses</li>
+        <li>More common in patients with pre-existing mental health conditions</li>
+      </ul>
+
+      <h3>FDA Monitoring</h3>
+      <p>The FDA has been monitoring reports of mental health complications associated with GLP-1 medications. The agency has received multiple reports of depression, anxiety, and suicidal thoughts in patients taking these drugs.</p>
+
+      <h3>Risk Factors</h3>
+      <p>Patients at higher risk for mental health issues include:</p>
+      <ul>
+        <li>Those with pre-existing depression or anxiety</li>
+        <li>Patients with a history of suicidal thoughts</li>
+        <li>Individuals taking higher doses of GLP-1 medications</li>
+        <li>Patients experiencing severe physical side effects</li>
+        <li>Those with significant weight loss</li>
+      </ul>
+    </section>
+
+    <section id="cases" class="content-section">
+      <h2>Case Studies</h2>
+
+      <div class="case-study">
+        <h4>Case Study: Severe Depression in 35-year-old Female</h4>
+        <p><strong>Background:</strong> Patient began taking Wegovy for weight loss management.</p>
+        <p><strong>Timeline:</strong> After 3 months of treatment, patient developed severe depression.</p>
+        <p><strong>Symptoms:</strong> Persistent sadness, loss of interest, sleep disturbances, and thoughts of suicide.</p>
+        <p><strong>Treatment:</strong> Required psychiatric evaluation and antidepressant medication.</p>
+        <p><strong>Outcome:</strong> Patient discontinued Wegovy and symptoms gradually improved.</p>
+      </div>
+
+      <div class="case-study">
+        <h4>Case Study: Suicidal Thoughts in 42-year-old Male</h4>
+        <p><strong>Background:</strong> Patient taking Ozempic for type 2 diabetes management.</p>
+        <p><strong>Symptoms:</strong> Developed severe anxiety and suicidal thoughts after 6 months of treatment.</p>
+        <p><strong>Medical Findings:</strong> Psychiatric evaluation confirmed medication-induced depression.</p>
+        <p><strong>Complications:</strong> Required hospitalization for suicidal ideation.</p>
+        <p><strong>Long-term Impact:</strong> Patient continues to require ongoing mental health treatment.</p>
+      </div>
+
+      <div class="case-study">
+        <h4>Case Study: Mood Changes in 28-year-old Female</h4>
+        <p><strong>Background:</strong> Patient prescribed Mounjaro for weight loss.</p>
+        <p><strong>Progression:</strong> Developed significant mood swings and irritability over 4 months.</p>
+        <p><strong>Diagnosis:</strong> Medication-induced mood disorder confirmed by psychiatrist.</p>
+        <p><strong>Treatment:</strong> Discontinued medication and symptoms resolved.</p>
+        <p><strong>Prevention:</strong> Patient advised to avoid GLP-1 medications in the future.</p>
+      </div>
+    </section>
+
+    <section id="treatment" class="content-section">
+      <h2>Treatment Options</h2>
+
+      <h3>Immediate Management</h3>
+      <ul>
+        <li><strong>Discontinuation of GLP-1 Medication:</strong> Immediate cessation if mental health symptoms develop</li>
+        <li><strong>Psychiatric Evaluation:</strong> Urgent assessment for depression and suicidal thoughts</li>
+        <li><strong>Safety Planning:</strong> For patients with suicidal ideation</li>
+        <li><strong>Support System:</strong> Involving family and friends in monitoring</li>
+        <li><strong>Crisis Intervention:</strong> Immediate mental health crisis services if needed</li>
+      </ul>
+
+      <h3>Medical Treatment</h3>
+      <ul>
+        <li><strong>Antidepressants:</strong> For depression and anxiety symptoms</li>
+        <li><strong>Anti-anxiety Medications:</strong> For severe anxiety</li>
+        <li><strong>Mood Stabilizers:</strong> For mood swings and irritability</li>
+        <li><strong>Psychotherapy:</strong> Cognitive behavioral therapy and counseling</li>
+        <li><strong>Support Groups:</strong> For patients with similar experiences</li>
+      </ul>
+
+      <h3>Prevention Strategies</h3>
+      <p>For patients taking GLP-1 medications:</p>
+      <ul>
+        <li>Regular mental health monitoring</li>
+        <li>Immediate reporting of mood changes</li>
+        <li>Maintain support system and social connections</li>
+        <li>Consider alternative medications if high risk</li>
+        <li>Regular check-ins with healthcare provider</li>
+        <li>Have crisis resources readily available</li>
+      </ul>
+
+      <h3>Long-term Management</h3>
+      <p>Patients with mental health issues may require:</p>
+      <ul>
+        <li>Ongoing psychiatric care</li>
+        <li>Regular therapy sessions</li>
+        <li>Medication management</li>
+        <li>Support group participation</li>
+        <li>Lifestyle modifications</li>
+        <li>Regular follow-up with mental health professionals</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GLP‑1 Side Effects Legal Support. All rights reserved. | Free consultation available.</p>
+  </footer>
+</body>
+</html> 

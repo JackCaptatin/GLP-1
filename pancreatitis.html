@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pancreatitis - GLP-1 Drugs Side Effects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1a202c;
+      background-color: #ffffff;
+      font-size: 16px;
+    }
+
+    .phone-bar {
+      background: #dc2626;
+      color: #fff;
+      text-align: center;
+      padding: 0.75rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .phone-bar a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      color: #fff;
+      padding: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-top: 3.5rem;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .back-link {
+      color: #bfdbfe;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    nav {
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1rem 0;
+      position: sticky;
+      top: 3.5rem;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      background: #e2e8f0;
+      color: #1e40af;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+      text-align: center;
+      border-left: 4px solid #dc2626;
+    }
+
+    .hero-section h2 {
+      font-size: 2.5rem;
+      color: #dc2626;
+      margin-bottom: 1rem;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      color: #64748b;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      margin-bottom: 3rem;
+    }
+
+    .content-section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #1e3a8a;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .content-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: #1e40af;
+      border-radius: 2px;
+    }
+
+    .content-section h3 {
+      font-size: 1.5rem;
+      color: #dc2626;
+      margin: 2rem 0 1rem;
+    }
+
+    .content-section p {
+      color: #64748b;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .case-study {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .case-study h4 {
+      color: #1e3a8a;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #dc2626;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .symptoms-list {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .symptoms-list h3 {
+      color: #dc2626;
+      margin-bottom: 1rem;
+    }
+
+    .symptoms-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .symptoms-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #fecaca;
+      color: #64748b;
+    }
+
+    .symptoms-list li:before {
+      content: "⚠️ ";
+      margin-right: 0.5rem;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 2rem;
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .header-container,
+      .nav-container,
+      main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .hero-section h2 {
+        font-size: 2rem;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="phone-bar">
+    <a href="tel:800-553-8082">📞 FREE CASE EVALUATION: 800-553-8082</a>
+  </div>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="back-link">← Back to Main Page</a>
+      <h1>Pancreatitis</h1>
+      <p>A life-threatening inflammation of the pancreas that has been linked to GLP-1 medications like Ozempic, Wegovy, and Mounjaro.</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <a href="#overview">Overview</a>
+      <a href="#symptoms">Symptoms</a>
+      <a href="#research">Research</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#treatment">Treatment</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-section">
+      <h2>Pancreatitis: Life-Threatening Inflammation</h2>
+      <p>Pancreatitis is a serious and potentially life-threatening condition where the pancreas becomes inflamed. Research has shown that GLP-1 medications can significantly increase the risk of this dangerous condition.</p>
+    </section>
+
+    <section id="overview" class="content-section">
+      <h2>What is Pancreatitis?</h2>
+      <p>Pancreatitis is inflammation of the pancreas, a vital organ that produces digestive enzymes and hormones like insulin. When the pancreas becomes inflamed, it can cause severe abdominal pain and potentially life-threatening complications.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Cases per 1,000 Semaglutide Users</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">8+</div>
+          <div class="stat-label">Cases per 1,000 Liraglutide Users</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">15%</div>
+          <div class="stat-label">Mortality Rate in Severe Cases</div>
+        </div>
+      </div>
+
+      <h3>How GLP-1 Drugs Cause Pancreatitis</h3>
+      <p>GLP-1 receptor agonists can cause pancreatitis through several mechanisms:</p>
+      <ul>
+        <li><strong>Direct stimulation:</strong> The drugs may directly stimulate pancreatic enzyme secretion</li>
+        <li><strong>Inflammation:</strong> They can trigger inflammatory responses in pancreatic tissue</li>
+        <li><strong>Duct obstruction:</strong> May cause obstruction of pancreatic ducts</li>
+        <li><strong>Autoimmune response:</strong> Can trigger autoimmune reactions against pancreatic cells</li>
+      </ul>
+    </section>
+
+    <section id="symptoms" class="content-section">
+      <h2>Common Symptoms</h2>
+      
+      <div class="symptoms-list">
+        <h3>Primary Symptoms</h3>
+        <ul>
+          <li>Severe upper abdominal pain that radiates to the back</li>
+          <li>Pain that worsens after eating</li>
+          <li>Nausea and vomiting</li>
+          <li>Fever and chills</li>
+          <li>Rapid pulse</li>
+          <li>Abdominal tenderness</li>
+          <li>Jaundice (yellowing of skin and eyes)</li>
+          <li>Low blood pressure</li>
+        </ul>
+      </div>
+
+      <h3>Complications</h3>
+      <p>Pancreatitis can lead to serious complications including:</p>
+      <ul>
+        <li><strong>Pseudocysts:</strong> Fluid-filled sacs that can become infected</li>
+        <li><strong>Necrosis:</strong> Death of pancreatic tissue</li>
+        <li><strong>Infection:</strong> Bacterial infection of the pancreas</li>
+        <li><strong>Kidney failure:</strong> Due to severe inflammation</li>
+        <li><strong>Breathing problems:</strong> Due to inflammation affecting the lungs</li>
+        <li><strong>Diabetes:</strong> Permanent damage to insulin-producing cells</li>
+      </ul>
+    </section>
+
+    <section id="research" class="content-section">
+      <h2>Research Findings</h2>
+
+      <h3>JAMA Study (October 2023)</h3>
+      <p>Research published in the Journal of the American Medical Association found that people taking GLP-1 drugs for weight loss had a higher risk of pancreatitis compared to those taking non-GLP-1 weight loss medications.</p>
+      
+      <p><strong>Study Details:</strong></p>
+      <ul>
+        <li>Pancreatitis occurred at a rate of about 5 cases per 1,000 users of semaglutide</li>
+        <li>8 cases per 1,000 users of liraglutide</li>
+        <li>Based on health insurance claims from 2006 to 2020</li>
+        <li>More than 5,000 patients in the U.S.</li>
+        <li>Compared GLP-1 medications to bupropion-naltrexone</li>
+      </ul>
+
+      <h3>FDA Warnings</h3>
+      <p>The FDA has issued warnings about the potential for GLP-1 medications to cause pancreatitis. The agency has received multiple reports of pancreatitis cases associated with these drugs, including some that were fatal.</p>
+
+      <h3>Clinical Evidence</h3>
+      <p>Multiple clinical studies have documented cases of acute pancreatitis in patients taking GLP-1 medications. The condition can develop rapidly and may require immediate medical intervention.</p>
+    </section>
+
+    <section id="cases" class="content-section">
+      <h2>Case Studies</h2>
+
+      <div class="case-study">
+        <h4>Case Study: Acute Pancreatitis in 45-year-old Female</h4>
+        <p><strong>Background:</strong> Patient with type 2 diabetes began taking Ozempic for blood sugar control.</p>
+        <p><strong>Timeline:</strong> After 3 months of treatment, patient developed severe abdominal pain.</p>
+        <p><strong>Diagnosis:</strong> Emergency room evaluation revealed acute pancreatitis with elevated pancreatic enzymes.</p>
+        <p><strong>Treatment:</strong> Required hospitalization for 5 days with IV fluids and pain management.</p>
+        <p><strong>Outcome:</strong> Patient discontinued Ozempic and has not experienced recurrence of pancreatitis.</p>
+      </div>
+
+      <div class="case-study">
+        <h4>Case Study: Severe Pancreatitis in 52-year-old Male</h4>
+        <p><strong>Background:</strong> Patient taking Wegovy for weight loss management.</p>
+        <p><strong>Symptoms:</strong> Developed severe upper abdominal pain radiating to the back, accompanied by nausea and vomiting.</p>
+        <p><strong>Medical Findings:</strong> CT scan revealed pancreatic inflammation and fluid collection around the pancreas.</p>
+        <p><strong>Complications:</strong> Developed pancreatic pseudocyst requiring drainage procedure.</p>
+        <p><strong>Long-term Impact:</strong> Patient developed diabetes due to pancreatic damage and requires insulin therapy.</p>
+      </div>
+    </section>
+
+    <section id="treatment" class="content-section">
+      <h2>Treatment Options</h2>
+
+      <h3>Acute Pancreatitis Treatment</h3>
+      <ul>
+        <li><strong>Hospitalization:</strong> Most cases require hospital admission</li>
+        <li><strong>IV Fluids:</strong> Aggressive hydration to prevent complications</li>
+        <li><strong>Pain Management:</strong> Strong pain medications often required</li>
+        <li><strong>Fasting:</strong> No food or drink initially to rest the pancreas</li>
+        <li><strong>Antibiotics:</strong> If infection is suspected</li>
+      </ul>
+
+      <h3>Surgical Interventions</h3>
+      <ul>
+        <li><strong>Drainage Procedures:</strong> For pancreatic pseudocysts or abscesses</li>
+        <li><strong>Necrosectomy:</strong> Removal of dead pancreatic tissue</li>
+        <li><strong>ERCP:</strong> Endoscopic procedures to clear blocked ducts</li>
+      </ul>
+
+      <h3>Long-term Management</h3>
+      <p>Patients who survive pancreatitis may require:</p>
+      <ul>
+        <li>Lifelong dietary modifications</li>
+        <li>Regular monitoring of pancreatic function</li>
+        <li>Diabetes management if insulin-producing cells are damaged</li>
+        <li>Pain management for chronic pancreatitis</li>
+        <li>Regular imaging studies to monitor for complications</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GLP‑1 Side Effects Legal Support. All rights reserved. | Free consultation available.</p>
+  </footer>
+</body>
+</html> 

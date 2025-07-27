@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ozempic/Wegovy Medication Information - GLP-1 Drugs Side Effects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1a202c;
+      background-color: #ffffff;
+      font-size: 16px;
+    }
+
+    .phone-bar {
+      background: #dc2626;
+      color: #fff;
+      text-align: center;
+      padding: 0.75rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .phone-bar a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      color: #fff;
+      padding: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-top: 3.5rem;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .back-link {
+      color: #bfdbfe;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    nav {
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1rem 0;
+      position: sticky;
+      top: 3.5rem;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      background: #e2e8f0;
+      color: #1e40af;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #1e3a8a;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: #1e40af;
+      border-radius: 2px;
+    }
+
+    .content-module {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .content-module h3 {
+      color: #1e3a8a;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .content-module p {
+      color: #64748b;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+      border: 1px solid #93c5fd;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .highlight-box h3 {
+      color: #1e3a8a;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .highlight-box p {
+      color: #374151;
+      margin: 0;
+    }
+
+    .medication-image {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .medication-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .info-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .info-card h4 {
+      color: #1e3a8a;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-card p {
+      color: #64748b;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .warning-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .warning-box h3 {
+      color: #dc2626;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .warning-box p {
+      color: #991b1b;
+      margin: 0;
+    }
+
+    ul, ol {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      color: #64748b;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #1e40af;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.5rem;
+      top: 0.5rem;
+      width: 1rem;
+      height: 1rem;
+      background: #1e40af;
+      border-radius: 50%;
+    }
+
+    .timeline-date {
+      font-weight: 600;
+      color: #1e40af;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 3rem 2rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-section h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #bfdbfe;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      text-decoration: none;
+    }
+
+    .footer-section a:hover {
+      color: #bfdbfe;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #374151;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .header-container,
+      .nav-container,
+      main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed Phone Number Bar -->
+  <div class="phone-bar">
+    <a href="tel:800-553-8082">📞 FREE CASE EVALUATION: 800-553-8082</a>
+  </div>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="back-link">← Back to Home</a>
+      <h1>Ozempic/Wegovy Medication Information</h1>
+      <p>Comprehensive information about semaglutide-based medications, their mechanisms of action, approved uses, and the growing concerns about serious side effects.</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <a href="#overview">Overview</a>
+      <a href="#mechanism">How It Works</a>
+      <a href="#approvals">FDA Approvals</a>
+      <a href="#usage">Usage Statistics</a>
+      <a href="#side-effects">Side Effects</a>
+      <a href="#legal">Legal Issues</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Medication Image -->
+    <div class="medication-image">
+      <img src="ozempic.jpg" alt="Box of Ozempic / Wegovy weight‑loss drug (semaglutide)">
+    </div>
+
+    <!-- Overview Section -->
+    <section id="overview">
+      <h2>What Are Ozempic and Wegovy?</h2>
+      
+      <div class="content-module">
+        <h3>Active Ingredient: Semaglutide</h3>
+        <p>Both Ozempic and Wegovy contain the same active ingredient: <strong>semaglutide</strong>, a glucagon-like peptide-1 (GLP-1) receptor agonist. This medication mimics the natural GLP-1 hormone that helps regulate blood sugar and appetite.</p>
+        
+        <div class="info-grid">
+          <div class="info-card">
+            <h4>Ozempic (Semaglutide)</h4>
+            <p><strong>Approved Use:</strong> Type 2 diabetes management</p>
+            <p><strong>Dosage:</strong> 0.5mg, 1mg, or 2mg weekly injection</p>
+            <p><strong>Manufacturer:</strong> Novo Nordisk</p>
+          </div>
+          <div class="info-card">
+            <h4>Wegovy (Semaglutide)</h4>
+            <p><strong>Approved Use:</strong> Chronic weight management</p>
+            <p><strong>Dosage:</strong> 0.25mg to 2.4mg weekly injection</p>
+            <p><strong>Manufacturer:</strong> Novo Nordisk</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Key Differences</h3>
+        <p>While both medications contain the same active ingredient, they are approved for different uses and have different dosing schedules. Ozempic is specifically approved for diabetes management, while Wegovy is approved for weight loss in adults with obesity or overweight with weight-related medical problems.</p>
+      </div>
+    </section>
+
+    <!-- Mechanism of Action -->
+    <section id="mechanism">
+      <h2>How GLP-1 Medications Work</h2>
+      
+      <div class="content-module">
+        <h3>GLP-1 Receptor Agonism</h3>
+        <p>Semaglutide works by binding to GLP-1 receptors throughout the body, particularly in the pancreas, brain, and gastrointestinal tract. This action produces several effects:</p>
+        
+        <ul>
+          <li><strong>Pancreatic Effects:</strong> Stimulates insulin secretion and reduces glucagon production, helping lower blood sugar</li>
+          <li><strong>Brain Effects:</strong> Acts on appetite centers to reduce hunger and increase feelings of fullness</li>
+          <li><strong>Gastric Effects:</strong> Slows down stomach emptying (gastroparesis), which can cause digestive issues</li>
+          <li><strong>Cardiovascular Effects:</strong> May have protective effects on the heart and blood vessels</li>
+        </ul>
+      </div>
+
+      <div class="content-module">
+        <h3>Weight Loss Mechanism</h3>
+        <p>The weight loss effects of semaglutide are primarily achieved through:</p>
+        <ol>
+          <li><strong>Appetite Suppression:</strong> Reduces hunger signals in the brain</li>
+          <li><strong>Delayed Gastric Emptying:</strong> Food stays in the stomach longer, creating prolonged fullness</li>
+          <li><strong>Reduced Food Intake:</strong> Patients naturally eat less due to decreased appetite</li>
+          <li><strong>Metabolic Changes:</strong> May affect how the body processes and stores fat</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FDA Approvals -->
+    <section id="approvals">
+      <h2>FDA Approval Timeline</h2>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">December 2017</div>
+          <h4>Ozempic Approved for Diabetes</h4>
+          <p>The FDA approved Ozempic (semaglutide) injection for the treatment of type 2 diabetes in adults, to be used alongside diet and exercise to improve glycemic control.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">June 2021</div>
+          <h4>Wegovy Approved for Weight Loss</h4>
+          <p>The FDA approved Wegovy (semaglutide) injection for chronic weight management in adults with obesity or overweight with at least one weight-related condition.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">January 2023</div>
+          <h4>Wegovy Approved for Adolescents</h4>
+          <p>The FDA expanded Wegovy's approval to include adolescents aged 12 and older with obesity, making it the first weight loss medication approved for this age group.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">March 2024</div>
+          <h4>Cardiovascular Benefits Approved</h4>
+          <p>The FDA approved Wegovy for reducing the risk of major cardiovascular events in adults with cardiovascular disease and either obesity or overweight.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usage Statistics -->
+    <section id="usage">
+      <h2>Usage and Market Impact</h2>
+      
+      <div class="content-module">
+        <h3>Prescription Trends</h3>
+        <p>The popularity of GLP-1 medications has exploded in recent years, driven by their effectiveness for weight loss and celebrity endorsements:</p>
+        
+        <div class="info-grid">
+          <div class="info-card">
+            <h4>Prescription Volume</h4>
+            <p>• Over 9 million prescriptions for Ozempic and Wegovy in 2023</p>
+            <p>• 40% increase in prescriptions from 2022 to 2023</p>
+            <p>• Estimated 1.7% of U.S. adults have used GLP-1 medications</p>
+          </div>
+          <div class="info-card">
+            <h4>Market Value</h4>
+            <p>• Global GLP-1 market valued at $15.5 billion in 2023</p>
+            <p>• Expected to reach $35 billion by 2030</p>
+            <p>• Novo Nordisk's market cap exceeded $500 billion in 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-module">
+        <h3>Off-Label Use Concerns</h3>
+        <p>Despite being approved for specific conditions, these medications are often prescribed off-label:</p>
+        <ul>
+          <li><strong>Cosmetic Weight Loss:</strong> Many prescriptions are for people without obesity or diabetes</li>
+          <li><strong>Social Media Influence:</strong> Celebrity endorsements and TikTok trends driving demand</li>
+          <li><strong>Supply Shortages:</strong> Off-label use contributing to medication shortages for diabetic patients</li>
+          <li><strong>Compounded Versions:</strong> Unregulated compounded semaglutide causing safety concerns</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Side Effects -->
+    <section id="side-effects">
+      <h2>Known Side Effects and Complications</h2>
+      
+      <div class="warning-box">
+        <h3>⚠️ Serious Side Effects Warning</h3>
+        <p>While GLP-1 medications can be effective, they have been linked to serious and potentially life-threatening side effects. If you experience any concerning symptoms, seek immediate medical attention.</p>
+      </div>
+
+      <div class="content-module">
+        <h3>Common Side Effects</h3>
+        <ul>
+          <li><strong>Nausea and Vomiting:</strong> Most common side effect, affecting up to 70% of users</li>
+          <li><strong>Diarrhea:</strong> Occurs in approximately 30% of patients</li>
+          <li><strong>Constipation:</strong> Affects about 25% of users</li>
+          <li><strong>Abdominal Pain:</strong> Reported by many patients</li>
+          <li><strong>Fatigue:</strong> Common during initial weeks of treatment</li>
+          <li><strong>Dizziness:</strong> May occur, especially when standing up</li>
+        </ul>
+      </div>
+
+      <div class="content-module">
+        <h3>Serious Complications</h3>
+        <p>Recent studies and patient reports have identified several serious complications:</p>
+        
+        <div class="info-grid">
+          <div class="info-card">
+            <h4>Gastrointestinal Issues</h4>
+            <p>• Gastroparesis (stomach paralysis)</p>
+            <p>• Bowel obstruction</p>
+            <p>• Intestinal tissue death</p>
+            <p>• Pancreatitis</p>
+          </div>
+          <div class="info-card">
+            <h4>Other Serious Effects</h4>
+            <p>• Kidney problems</p>
+            <p>• Optic nerve damage</p>
+            <p>• Mental health issues</p>
+            <p>• Gallbladder disease</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-module">
+        <h3>Emergency Department Visits</h3>
+        <p>A recent study published in April 2025 revealed alarming statistics:</p>
+        <ul>
+          <li><strong>24,499 emergency department visits</strong> related to semaglutide in just two years</li>
+          <li><strong>10+ deaths</strong> linked to compounded semaglutide use</li>
+          <li><strong>100+ hospitalizations</strong> reported to FDA</li>
+          <li>Cases continue to increase as usage grows</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Legal Issues -->
+    <section id="legal">
+      <h2>Legal Developments and Lawsuits</h2>
+      
+      <div class="content-module">
+        <h3>Current Litigation Status</h3>
+        <p>As of June 2025, there are <strong>1,882 active lawsuits</strong> consolidated in the GLP-1 MDL (Multidistrict Litigation) in the Eastern District of Pennsylvania. These cases primarily involve:</p>
+        
+        <ul>
+          <li><strong>Gastroparesis claims:</strong> Stomach paralysis requiring surgical intervention</li>
+          <li><strong>Vision loss claims:</strong> NAION (nonarteritic anterior ischemic optic neuropathy)</li>
+          <li><strong>Failure to warn:</strong> Allegations that manufacturers knew of risks but didn't properly warn patients</li>
+          <li><strong>Misleading advertising:</strong> Claims about safety and effectiveness</li>
+        </ul>
+      </div>
+
+      <div class="content-module">
+        <h3>Notable Cases</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">September 2024</div>
+            <h4>Juanita Gantt Case</h4>
+            <p>A 62-year-old patient was hospitalized after taking Wegovy and Ozempic. Parts of her large intestine died and needed to be removed. She now lives with a permanent ileostomy bag.</p>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">July 2025</div>
+            <h4>Optic Nerve Damage Lawsuit</h4>
+            <p>A plaintiff from Illinois sued Novo Nordisk, claiming that Wegovy caused debilitating optic nerve damage, expanding litigation beyond gastrointestinal claims.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>FDA Monitoring</h3>
+        <p>The FDA continues to monitor adverse event reports and has issued several warnings about GLP-1 medications, including concerns about compounded versions and the need for proper patient monitoring.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Get Legal Help</h2>
+      <div class="content-module">
+        <h3>Free Case Evaluation</h3>
+        <p>If you or a loved one has experienced serious side effects from Ozempic, Wegovy, or other GLP-1 medications, you may be entitled to compensation. Our legal team offers:</p>
+        
+        <ul>
+          <li><strong>Free Consultation:</strong> No upfront costs to discuss your case</li>
+          <li><strong>Contingency Fees:</strong> You only pay if we win your case</li>
+          <li><strong>Nationwide Representation:</strong> We serve clients across the United States</li>
+          <li><strong>Experienced Attorneys:</strong> Specialized in pharmaceutical litigation</li>
+        </ul>
+        
+        <p><strong>Call us today at 800-553-8082 for a free, confidential consultation.</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p>📞 Free Case Evaluation: 800-553-8082</p>
+        <p>📍 Serving clients nationwide</p>
+        <p>⏰ Available 24/7 for consultations</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Legal Services</h3>
+        <p><a href="#">Product Liability</a></p>
+        <p><a href="#">Mass Torts</a></p>
+        <p><a href="#">Pharmaceutical Litigation</a></p>
+        <p><a href="#">Personal Injury</a></p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <p><a href="gastroparesis.html">Gastroparesis</a></p>
+        <p><a href="pancreatitis.html">Pancreatitis</a></p>
+        <p><a href="optic-nerve-damage.html">Vision Loss</a></p>
+        <p><a href="mental-health-issues.html">Mental Health</a></p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Legal Information</h3>
+        <p><a href="#">Disclaimer</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <p><a href="#">Terms of Service</a></p>
+        <p><a href="#">Attorney Advertising</a></p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 GLP‑1 Side Effects Legal Support. All rights reserved. | Free consultation available.</p>
+      <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+      <p>Please do not include any confidential or sensitive information in a contact form. Submitting a contact form does not create an attorney-client relationship.</p>
+    </div>
+  </footer>
+</body>
+</html> 

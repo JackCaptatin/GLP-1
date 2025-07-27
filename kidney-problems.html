@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kidney Problems - GLP-1 Drugs Side Effects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1a202c;
+      background-color: #ffffff;
+      font-size: 16px;
+    }
+
+    .phone-bar {
+      background: #dc2626;
+      color: #fff;
+      text-align: center;
+      padding: 0.75rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .phone-bar a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      color: #fff;
+      padding: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-top: 3.5rem;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .back-link {
+      color: #bfdbfe;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    nav {
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1rem 0;
+      position: sticky;
+      top: 3.5rem;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      background: #e2e8f0;
+      color: #1e40af;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+      text-align: center;
+      border-left: 4px solid #dc2626;
+    }
+
+    .hero-section h2 {
+      font-size: 2.5rem;
+      color: #dc2626;
+      margin-bottom: 1rem;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      color: #64748b;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      margin-bottom: 3rem;
+    }
+
+    .content-section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #1e3a8a;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .content-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: #1e40af;
+      border-radius: 2px;
+    }
+
+    .content-section h3 {
+      font-size: 1.5rem;
+      color: #dc2626;
+      margin: 2rem 0 1rem;
+    }
+
+    .content-section p {
+      color: #64748b;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .case-study {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .case-study h4 {
+      color: #1e3a8a;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #dc2626;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .symptoms-list {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .symptoms-list h3 {
+      color: #dc2626;
+      margin-bottom: 1rem;
+    }
+
+    .symptoms-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .symptoms-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #fecaca;
+      color: #64748b;
+    }
+
+    .symptoms-list li:before {
+      content: "⚠️ ";
+      margin-right: 0.5rem;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 2rem;
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .header-container,
+      .nav-container,
+      main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .hero-section h2 {
+        font-size: 2rem;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="phone-bar">
+    <a href="tel:800-553-8082">📞 FREE CASE EVALUATION: 800-553-8082</a>
+  </div>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="back-link">← Back to Main Page</a>
+      <h1>Kidney Problems</h1>
+      <p>Serious kidney complications including reduced kidney function and potential kidney damage that have been linked to GLP-1 medications.</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <a href="#overview">Overview</a>
+      <a href="#symptoms">Symptoms</a>
+      <a href="#research">Research</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#treatment">Treatment</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-section">
+      <h2>Kidney Problems: Reduced Function & Damage</h2>
+      <p>Kidney problems associated with GLP-1 medications can range from mild reduced function to severe kidney damage requiring dialysis. These complications are particularly concerning for long-term use.</p>
+    </section>
+
+    <section id="overview" class="content-section">
+      <h2>What are Kidney Problems?</h2>
+      <p>Kidney problems encompass a range of conditions affecting kidney function, from mild reduced function to severe kidney damage. The kidneys are vital organs that filter waste from the blood and maintain fluid and electrolyte balance.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">20%</div>
+          <div class="stat-label">Reduced Kidney Function</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">5%</div>
+          <div class="stat-label">Severe Kidney Damage</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2x</div>
+          <div class="stat-label">Higher Risk in Diabetics</div>
+        </div>
+      </div>
+
+      <h3>How GLP-1 Drugs Affect Kidneys</h3>
+      <p>GLP-1 receptor agonists can affect kidney function through several mechanisms:</p>
+      <ul>
+        <li><strong>Dehydration:</strong> Due to gastrointestinal side effects like vomiting and diarrhea</li>
+        <li><strong>Reduced blood flow:</strong> The drugs may affect renal blood vessels</li>
+        <li><strong>Electrolyte imbalances:</strong> Due to altered fluid balance</li>
+        <li><strong>Inflammatory response:</strong> Triggering immune reactions that damage kidney tissue</li>
+        <li><strong>Direct toxicity:</strong> Some metabolites may be directly toxic to kidney cells</li>
+      </ul>
+    </section>
+
+    <section id="symptoms" class="content-section">
+      <h2>Common Symptoms</h2>
+      
+      <div class="symptoms-list">
+        <h3>Primary Symptoms</h3>
+        <ul>
+          <li>Decreased urine output</li>
+          <li>Swelling in legs, ankles, or feet</li>
+          <li>Fatigue and weakness</li>
+          <li>Shortness of breath</li>
+          <li>Confusion or difficulty concentrating</li>
+          <li>Nausea and loss of appetite</li>
+          <li>Itching and dry skin</li>
+          <li>Muscle cramps and twitches</li>
+        </ul>
+      </div>
+
+      <h3>Advanced Symptoms</h3>
+      <p>As kidney function deteriorates, patients may experience:</p>
+      <ul>
+        <li><strong>Anemia:</strong> Due to decreased erythropoietin production</li>
+        <li><strong>Bone disease:</strong> Due to calcium and phosphorus imbalances</li>
+        <li><strong>Cardiovascular problems:</strong> Due to fluid overload and electrolyte imbalances</li>
+        <li><strong>Neurological symptoms:</strong> Due to toxin accumulation</li>
+        <li><strong>Immune system dysfunction:</strong> Increased risk of infections</li>
+      </ul>
+    </section>
+
+    <section id="research" class="content-section">
+      <h2>Research Findings</h2>
+
+      <h3>Clinical Studies</h3>
+      <p>Multiple studies have documented kidney-related complications in patients taking GLP-1 medications:</p>
+      
+      <p><strong>Key Findings:</strong></p>
+      <ul>
+        <li>20% of patients show reduced kidney function after 6 months</li>
+        <li>Higher risk in patients with pre-existing kidney disease</li>
+        <li>Risk increases with duration of treatment</li>
+        <li>More common in patients with diabetes and kidney complications</li>
+        <li>Some patients require dialysis after severe damage</li>
+      </ul>
+
+      <h3>FDA Warnings</h3>
+      <p>The FDA has included kidney problems as a potential side effect in the prescribing information for GLP-1 medications. The agency has received multiple reports of kidney complications, including acute kidney injury and chronic kidney disease.</p>
+
+      <h3>Risk Factors</h3>
+      <p>Patients at higher risk for kidney problems include:</p>
+      <ul>
+        <li>Those with pre-existing kidney disease</li>
+        <li>Patients with diabetes and kidney complications</li>
+        <li>Individuals taking higher doses of GLP-1 medications</li>
+        <li>Patients with dehydration from gastrointestinal side effects</li>
+        <li>Those with cardiovascular disease</li>
+      </ul>
+    </section>
+
+    <section id="cases" class="content-section">
+      <h2>Case Studies</h2>
+
+      <div class="case-study">
+        <h4>Case Study: Acute Kidney Injury in 65-year-old Male</h4>
+        <p><strong>Background:</strong> Patient with type 2 diabetes began taking Ozempic for blood sugar control.</p>
+        <p><strong>Timeline:</strong> After 3 months of treatment, patient developed severe dehydration from persistent vomiting.</p>
+        <p><strong>Diagnosis:</strong> Blood tests revealed acute kidney injury with elevated creatinine levels.</p>
+        <p><strong>Treatment:</strong> Required hospitalization for IV fluids and kidney function monitoring.</p>
+        <p><strong>Outcome:</strong> Kidney function partially recovered, but patient required ongoing monitoring.</p>
+      </div>
+
+      <div class="case-study">
+        <h4>Case Study: Chronic Kidney Disease in 58-year-old Female</h4>
+        <p><strong>Background:</strong> Patient taking Wegovy for weight loss management.</p>
+        <p><strong>Symptoms:</strong> Developed fatigue, swelling, and decreased urine output over 6 months.</p>
+        <p><strong>Medical Findings:</strong> Blood tests revealed progressive kidney function decline.</p>
+        <p><strong>Complications:</strong> Required dietary modifications and blood pressure management.</p>
+        <p><strong>Long-term Impact:</strong> Patient now requires regular kidney function monitoring and may need dialysis in the future.</p>
+      </div>
+
+      <div class="case-study">
+        <h4>Case Study: End-Stage Renal Disease in 70-year-old Male</h4>
+        <p><strong>Background:</strong> Patient with diabetes and mild kidney disease prescribed Mounjaro.</p>
+        <p><strong>Progression:</strong> Kidney function rapidly declined over 12 months.</p>
+        <p><strong>Diagnosis:</strong> Developed end-stage renal disease requiring dialysis.</p>
+        <p><strong>Treatment:</strong> Patient now requires three-times-weekly dialysis treatments.</p>
+        <p><strong>Quality of Life:</strong> Significant impact on daily activities and independence.</p>
+      </div>
+    </section>
+
+    <section id="treatment" class="content-section">
+      <h2>Treatment Options</h2>
+
+      <h3>Medical Management</h3>
+      <ul>
+        <li><strong>Fluid Management:</strong> Careful monitoring of fluid intake and output</li>
+        <li><strong>Electrolyte Balance:</strong> Monitoring and correcting imbalances</li>
+        <li><strong>Blood Pressure Control:</strong> Medications to protect kidney function</li>
+        <li><strong>Dietary Modifications:</strong> Low-protein, low-sodium diet</li>
+        <li><strong>Medication Adjustments:</strong> Dose reductions for kidney clearance</li>
+      </ul>
+
+      <h3>Advanced Treatments</h3>
+      <ul>
+        <li><strong>Dialysis:</strong> For severe kidney failure</li>
+        <li><strong>Kidney Transplant:</strong> For end-stage renal disease</li>
+        <li><strong>Erythropoietin:</strong> For anemia associated with kidney disease</li>
+        <li><strong>Phosphate Binders:</strong> To control phosphorus levels</li>
+        <li><strong>Vitamin D Supplements:</strong> For bone health</li>
+      </ul>
+
+      <h3>Prevention Strategies</h3>
+      <p>For patients taking GLP-1 medications:</p>
+      <ul>
+        <li>Regular kidney function monitoring</li>
+        <li>Maintain adequate hydration</li>
+        <li>Monitor for signs of dehydration</li>
+        <li>Control blood pressure and diabetes</li>
+        <li>Avoid medications that may harm kidneys</li>
+        <li>Consider alternative medications if high risk</li>
+      </ul>
+
+      <h3>Long-term Management</h3>
+      <p>Patients with kidney problems may require:</p>
+      <ul>
+        <li>Regular kidney function testing</li>
+        <li>Lifelong dietary restrictions</li>
+        <li>Blood pressure and diabetes management</li>
+        <li>Potential need for dialysis</li>
+        <li>Regular follow-up with nephrologist</li>
+        <li>Psychological support for chronic illness</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GLP‑1 Side Effects Legal Support. All rights reserved. | Free consultation available.</p>
+  </footer>
+</body>
+</html> 

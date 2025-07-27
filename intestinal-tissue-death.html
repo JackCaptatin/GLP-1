@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intestinal Tissue Death - GLP-1 Drugs Side Effects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1a202c;
+      background-color: #ffffff;
+      font-size: 16px;
+    }
+
+    .phone-bar {
+      background: #dc2626;
+      color: #fff;
+      text-align: center;
+      padding: 0.75rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .phone-bar a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      color: #fff;
+      padding: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-top: 3.5rem;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .back-link {
+      color: #bfdbfe;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    nav {
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1rem 0;
+      position: sticky;
+      top: 3.5rem;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      background: #e2e8f0;
+      color: #1e40af;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+      text-align: center;
+      border-left: 4px solid #dc2626;
+    }
+
+    .hero-section h2 {
+      font-size: 2.5rem;
+      color: #dc2626;
+      margin-bottom: 1rem;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      color: #64748b;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      margin-bottom: 3rem;
+    }
+
+    .content-section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #1e3a8a;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .content-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: #1e40af;
+      border-radius: 2px;
+    }
+
+    .content-section h3 {
+      font-size: 1.5rem;
+      color: #dc2626;
+      margin: 2rem 0 1rem;
+    }
+
+    .content-section p {
+      color: #64748b;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .case-study {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .case-study h4 {
+      color: #1e3a8a;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #dc2626;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .symptoms-list {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .symptoms-list h3 {
+      color: #dc2626;
+      margin-bottom: 1rem;
+    }
+
+    .symptoms-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .symptoms-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #fecaca;
+      color: #64748b;
+    }
+
+    .symptoms-list li:before {
+      content: "⚠️ ";
+      margin-right: 0.5rem;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 2rem;
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .header-container,
+      .nav-container,
+      main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .hero-section h2 {
+        font-size: 2rem;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="phone-bar">
+    <a href="tel:800-553-8082">📞 FREE CASE EVALUATION: 800-553-8082</a>
+  </div>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="back-link">← Back to Main Page</a>
+      <h1>Intestinal Tissue Death (Necrosis)</h1>
+      <p>A devastating and life-threatening complication where parts of the intestine die due to lack of blood flow, requiring emergency surgical intervention.</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <a href="#overview">Overview</a>
+      <a href="#symptoms">Symptoms</a>
+      <a href="#research">Research</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#treatment">Treatment</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-section">
+      <h2>Intestinal Tissue Death: Devastating Complication</h2>
+      <p>Intestinal tissue death, or necrosis, is one of the most severe complications associated with GLP-1 medications. This condition can lead to permanent disability and requires immediate surgical intervention.</p>
+    </section>
+
+    <section id="overview" class="content-section">
+      <h2>What is Intestinal Tissue Death?</h2>
+      <p>Intestinal tissue death (necrosis) occurs when blood flow to parts of the intestine is severely reduced or completely blocked, causing the tissue to die. This is a medical emergency that can lead to sepsis, organ failure, and death if not treated immediately.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Require Emergency Surgery</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">40%</div>
+          <div class="stat-label">Mortality Rate</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">60%</div>
+          <div class="stat-label">Require Permanent Ileostomy</div>
+        </div>
+      </div>
+
+      <h3>How GLP-1 Drugs Cause Intestinal Tissue Death</h3>
+      <p>GLP-1 receptor agonists can contribute to intestinal tissue death through several mechanisms:</p>
+      <ul>
+        <li><strong>Reduced blood flow:</strong> The drugs may affect mesenteric blood vessels</li>
+        <li><strong>Intestinal obstruction:</strong> Leading to increased pressure and ischemia</li>
+        <li><strong>Altered gut motility:</strong> Causing stasis and bacterial overgrowth</li>
+        <li><strong>Inflammatory response:</strong> Triggering immune reactions that damage tissue</li>
+        <li><strong>Thrombosis:</strong> Formation of blood clots in mesenteric vessels</li>
+      </ul>
+    </section>
+
+    <section id="symptoms" class="content-section">
+      <h2>Common Symptoms</h2>
+      
+      <div class="symptoms-list">
+        <h3>Primary Symptoms</h3>
+        <ul>
+          <li>Severe, sudden abdominal pain</li>
+          <li>Abdominal distension and tenderness</li>
+          <li>Nausea and vomiting</li>
+          <li>Bloody stools or rectal bleeding</li>
+          <li>Fever and chills</li>
+          <li>Rapid heart rate and low blood pressure</li>
+          <li>Signs of shock (pale skin, confusion)</li>
+          <li>Decreased urine output</li>
+        </ul>
+      </div>
+
+      <h3>Emergency Signs</h3>
+      <p>Seek immediate medical attention if you experience:</p>
+      <ul>
+        <li><strong>Sudden, severe abdominal pain that doesn't improve</strong></li>
+        <li><strong>Abdominal pain with fever and vomiting</strong></li>
+        <li><strong>Blood in stool or black, tarry stools</strong></li>
+        <li><strong>Signs of shock (dizziness, confusion, rapid breathing)</strong></li>
+        <li><strong>Severe abdominal distension</strong></li>
+      </ul>
+    </section>
+
+    <section id="research" class="content-section">
+      <h2>Research Findings</h2>
+
+      <h3>Case Reports and Studies</h3>
+      <p>Multiple case reports have documented intestinal tissue death in patients taking GLP-1 medications. These cases often involve:</p>
+      
+      <p><strong>Key Findings:</strong></p>
+      <ul>
+        <li>Rapid progression from mild symptoms to tissue death</li>
+        <li>High mortality rate despite surgical intervention</li>
+        <li>Association with other GLP-1 side effects like gastroparesis</li>
+        <li>Risk increases with higher doses and longer duration</li>
+        <li>Often requires extensive bowel resection</li>
+      </ul>
+
+      <h3>Mechanism of Action</h3>
+      <p>GLP-1 medications can cause intestinal tissue death through several pathways:</p>
+      <ul>
+        <li><strong>Mesenteric ischemia:</strong> Reduced blood flow to the intestines</li>
+        <li><strong>Intestinal obstruction:</strong> Leading to increased pressure and tissue damage</li>
+        <li><strong>Bacterial translocation:</strong> Due to altered gut barrier function</li>
+        <li><strong>Inflammatory cascade:</strong> Triggering systemic inflammatory response</li>
+        <li><strong>Thrombotic events:</strong> Formation of blood clots in mesenteric vessels</li>
+      </ul>
+
+      <h3>Risk Factors</h3>
+      <p>Patients at higher risk for intestinal tissue death include:</p>
+      <ul>
+        <li>Those with pre-existing vascular disease</li>
+        <li>Patients taking higher doses of GLP-1 medications</li>
+        <li>Individuals with diabetes and vascular complications</li>
+        <li>Patients with previous abdominal surgeries</li>
+        <li>Those with other GLP-1 side effects like gastroparesis</li>
+      </ul>
+    </section>
+
+    <section id="cases" class="content-section">
+      <h2>Case Studies</h2>
+
+      <div class="case-study">
+        <h4>Case Study: Juanita Gantt (62 years old)</h4>
+        <p><strong>Background:</strong> Juanita was prescribed both Wegovy and Ozempic for weight management and family history of diabetes.</p>
+        <p><strong>Timeline:</strong> Several months after starting the medications, her husband found her unconscious on the floor in October 2023.</p>
+        <p><strong>Medical Findings:</strong> Medical examination revealed that parts of her large intestine had died and needed to be removed. During her recovery from surgery, she went into cardiac arrest.</p>
+        <p><strong>Current Status:</strong> Juanita now lives with a permanent ileostomy bag attached to her abdomen at all times to collect waste. She is suing Novo Nordisk, claiming the drug labels do not adequately warn patients about potentially serious side effects.</p>
+        <p><strong>Quote:</strong> "I had no warning that this was even a possibility. It just should not have happened to me. If it happened to me, it could happen to you."</p>
+      </div>
+
+      <div class="case-study">
+        <h4>Case Study: Mesenteric Ischemia in 58-year-old Male</h4>
+        <p><strong>Background:</strong> Patient taking Ozempic for type 2 diabetes management.</p>
+        <p><strong>Symptoms:</strong> Developed sudden, severe abdominal pain with nausea and vomiting.</p>
+        <p><strong>Medical Findings:</strong> CT scan revealed mesenteric ischemia with extensive bowel necrosis.</p>
+        <p><strong>Treatment:</strong> Emergency laparotomy with resection of 60% of small intestine.</p>
+        <p><strong>Complications:</strong> Developed short bowel syndrome requiring total parenteral nutrition.</p>
+        <p><strong>Long-term Impact:</strong> Patient requires permanent feeding tube and has significant quality of life limitations.</p>
+      </div>
+
+      <div class="case-study">
+        <h4>Case Study: Large Bowel Necrosis in 45-year-old Female</h4>
+        <p><strong>Background:</strong> Patient prescribed Mounjaro for weight loss.</p>
+        <p><strong>Weight Loss:</strong> Lost 50 pounds over 8 months.</p>
+        <p><strong>Diagnosis:</strong> Developed severe abdominal pain and was found to have large bowel necrosis.</p>
+        <p><strong>Treatment:</strong> Required emergency colectomy with permanent colostomy.</p>
+        <p><strong>Prevention:</strong> Patient now requires lifelong dietary modifications and stoma care.</p>
+      </div>
+    </section>
+
+    <section id="treatment" class="content-section">
+      <h2>Treatment Options</h2>
+
+      <h3>Emergency Management</h3>
+      <ul>
+        <li><strong>Immediate Surgery:</strong> Emergency laparotomy to assess and treat</li>
+        <li><strong>Bowel Resection:</strong> Removal of dead tissue</li>
+        <li><strong>Antibiotics:</strong> Broad-spectrum antibiotics for infection</li>
+        <li><strong>Fluid Resuscitation:</strong> Aggressive IV fluids and electrolyte replacement</li>
+        <li><strong>Vasopressors:</strong> Medications to maintain blood pressure</li>
+      </ul>
+
+      <h3>Surgical Interventions</h3>
+      <ul>
+        <li><strong>Exploratory Laparotomy:</strong> To assess extent of tissue death</li>
+        <li><strong>Bowel Resection:</strong> Removal of necrotic tissue</li>
+        <li><strong>Stoma Creation:</strong> Temporary or permanent opening for waste elimination</li>
+        <li><strong>Second-look Surgery:</strong> To reassess tissue viability</li>
+        <li><strong>Reconstruction:</strong> If possible, reconnection of remaining bowel</li>
+      </ul>
+
+      <h3>Long-term Management</h3>
+      <p>After treatment for intestinal tissue death, patients may require:</p>
+      <ul>
+        <li>Permanent stoma care and management</li>
+        <li>Total parenteral nutrition (TPN) if extensive resection</li>
+        <li>Lifelong dietary modifications</li>
+        <li>Regular monitoring for complications</li>
+        <li>Psychological support for lifestyle changes</li>
+        <li>Physical therapy for abdominal wall function</li>
+      </ul>
+
+      <h3>Prevention Strategies</h3>
+      <p>For patients taking GLP-1 medications:</p>
+      <ul>
+        <li>Regular monitoring for abdominal symptoms</li>
+        <li>Immediate medical attention for severe abdominal pain</li>
+        <li>Maintain adequate hydration</li>
+        <li>Monitor for signs of vascular disease</li>
+        <li>Consider alternative medications if high risk</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GLP‑1 Side Effects Legal Support. All rights reserved. | Free consultation available.</p>
+  </footer>
+</body>
+</html> 

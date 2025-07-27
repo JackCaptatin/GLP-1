@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gastrointestinal Side Effects - GLP-1 Drugs Complications</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1a202c;
+      background-color: #ffffff;
+      font-size: 16px;
+    }
+
+    .phone-bar {
+      background: #dc2626;
+      color: #fff;
+      text-align: center;
+      padding: 0.75rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .phone-bar a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      color: #fff;
+      padding: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-top: 3.5rem;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .back-link {
+      color: #bfdbfe;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    nav {
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1rem 0;
+      position: sticky;
+      top: 3.5rem;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      background: #e2e8f0;
+      color: #1e40af;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #1e3a8a;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: #1e40af;
+      border-radius: 2px;
+    }
+
+    .content-module {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .content-module h3 {
+      color: #1e3a8a;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .content-module p {
+      color: #64748b;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+      border: 1px solid #93c5fd;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .highlight-box h3 {
+      color: #1e3a8a;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .highlight-box p {
+      color: #374151;
+      margin: 0;
+    }
+
+    .warning-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .warning-box h3 {
+      color: #dc2626;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .warning-box p {
+      color: #991b1b;
+      margin: 0;
+    }
+
+    .effects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .effect-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .effect-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .effect-card h4 {
+      color: #dc2626;
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .effect-card p {
+      color: #64748b;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    .effect-card a {
+      color: #1e40af;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .effect-card a:hover {
+      text-decoration: underline;
+    }
+
+    .symptoms-list {
+      background: #f1f5f9;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .symptoms-list h5 {
+      color: #1e3a8a;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .symptoms-list ul {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+
+    .symptoms-list li {
+      color: #64748b;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .research-box {
+      background: #f0f9ff;
+      border: 1px solid #0ea5e9;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .research-box h3 {
+      color: #0369a1;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .research-box p {
+      color: #0c4a6e;
+      margin: 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #dc2626;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    ul, ol {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      color: #64748b;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 3rem 2rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-section h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #bfdbfe;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      text-decoration: none;
+    }
+
+    .footer-section a:hover {
+      color: #bfdbfe;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #374151;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .header-container,
+      .nav-container,
+      main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .effects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed Phone Number Bar -->
+  <div class="phone-bar">
+    <a href="tel:800-553-8082">📞 FREE CASE EVALUATION: 800-553-8082</a>
+  </div>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="back-link">← Back to Home</a>
+      <h1>Gastrointestinal Side Effects</h1>
+      <p>Comprehensive information about the serious gastrointestinal complications associated with GLP-1 medications, including gastroparesis, bowel obstruction, and intestinal tissue death.</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <a href="#overview">Overview</a>
+      <a href="#gastroparesis">Gastroparesis</a>
+      <a href="#bowel-obstruction">Bowel Obstruction</a>
+      <a href="#intestinal-death">Intestinal Death</a>
+      <a href="#pancreatitis">Pancreatitis</a>
+      <a href="#research">Research</a>
+      <a href="#legal">Legal Help</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Overview Section -->
+    <section id="overview">
+      <h2>Gastrointestinal Complications Overview</h2>
+      
+      <div class="warning-box">
+        <h3>⚠️ Serious GI Complications Warning</h3>
+        <p>GLP-1 medications have been linked to severe gastrointestinal complications that can be life-threatening. If you experience persistent nausea, vomiting, severe abdominal pain, or inability to eat, seek immediate medical attention.</p>
+      </div>
+
+      <div class="content-module">
+        <h3>How GLP-1 Drugs Affect the Digestive System</h3>
+        <p>GLP-1 receptor agonists like Ozempic and Wegovy work by slowing down gastric emptying - the process by which food moves from the stomach to the small intestine. While this effect helps with weight loss by creating feelings of fullness, it can also lead to serious complications:</p>
+        
+        <ul>
+          <li><strong>Delayed Gastric Emptying:</strong> Food stays in the stomach longer than normal</li>
+          <li><strong>Reduced Intestinal Motility:</strong> Slower movement of food through the intestines</li>
+          <li><strong>Altered Digestive Hormones:</strong> Changes in how the body processes food</li>
+          <li><strong>Inflammation:</strong> Potential inflammatory effects on digestive organs</li>
+        </ul>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">24,499</div>
+          <div class="stat-label">Emergency Visits</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">70%</div>
+          <div class="stat-label">Report Nausea</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">30%</div>
+          <div class="stat-label">Experience Vomiting</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">25%</div>
+          <div class="stat-label">Have Constipation</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gastroparesis Section -->
+    <section id="gastroparesis">
+      <h2>Gastroparesis (Stomach Paralysis)</h2>
+      
+      <div class="content-module">
+        <h3>What is Gastroparesis?</h3>
+        <p>Gastroparesis is a condition where the stomach cannot empty properly due to nerve damage or muscle dysfunction. In the context of GLP-1 medications, this occurs because the drugs intentionally slow gastric emptying, but in some cases, this effect becomes permanent or severe.</p>
+        
+        <div class="symptoms-list">
+          <h5>Common Symptoms:</h5>
+          <ul>
+            <li>Severe nausea and vomiting</li>
+            <li>Feeling full after eating small amounts</li>
+            <li>Abdominal pain and bloating</li>
+            <li>Acid reflux and heartburn</li>
+            <li>Loss of appetite</li>
+            <li>Weight loss due to inability to eat</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="effects-grid">
+        <div class="effect-card">
+          <h4><a href="gastroparesis.html">Gastroparesis Details</a></h4>
+          <p>A condition where the stomach cannot empty properly, leading to severe nausea, vomiting, and abdominal pain. Many patients require surgical intervention.</p>
+          <p><strong>Click for detailed information →</strong></p>
+        </div>
+        
+        <div class="effect-card">
+          <h4>Treatment Options</h4>
+          <p>Treatment may include dietary changes, medications to stimulate stomach emptying, or in severe cases, surgical procedures like gastric pacemakers or feeding tubes.</p>
+        </div>
+      </div>
+
+      <div class="research-box">
+        <h3>Research Findings</h3>
+        <p>A study published in JAMA in October 2023 found that people taking GLP-1 drugs had a significantly higher risk of gastroparesis compared to those taking other weight loss medications. The study analyzed data from over 5,000 patients and found a 3.67-fold increased risk.</p>
+      </div>
+    </section>
+
+    <!-- Bowel Obstruction Section -->
+    <section id="bowel-obstruction">
+      <h2>Bowel Obstruction</h2>
+      
+      <div class="content-module">
+        <h3>Understanding Bowel Obstruction</h3>
+        <p>Bowel obstruction occurs when there is a blockage preventing food or liquid from moving through the intestines. This can be a life-threatening emergency requiring immediate medical intervention.</p>
+        
+        <div class="symptoms-list">
+          <h5>Warning Signs:</h5>
+          <ul>
+            <li>Severe abdominal pain and cramping</li>
+            <li>Inability to pass gas or have bowel movements</li>
+            <li>Nausea and vomiting</li>
+            <li>Abdominal swelling and bloating</li>
+            <li>Loss of appetite</li>
+            <li>Fever (indicating infection)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="effects-grid">
+        <div class="effect-card">
+          <h4><a href="bowel-obstruction.html">Bowel Obstruction Details</a></h4>
+          <p>Blockages preventing food or liquid from moving through the intestines, requiring emergency medical intervention.</p>
+          <p><strong>Click for detailed information →</strong></p>
+        </div>
+        
+        <div class="effect-card">
+          <h4>Emergency Treatment</h4>
+          <p>Bowel obstruction is a medical emergency that may require hospitalization, IV fluids, and sometimes surgery to remove the blockage.</p>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <h3>⚠️ Emergency Warning</h3>
+        <p>If you experience symptoms of bowel obstruction, seek immediate medical attention. This condition can be life-threatening if not treated promptly.</p>
+      </div>
+    </section>
+
+    <!-- Intestinal Tissue Death Section -->
+    <section id="intestinal-death">
+      <h2>Intestinal Tissue Death</h2>
+      
+      <div class="content-module">
+        <h3>Intestinal Tissue Death (Necrosis)</h3>
+        <p>In severe cases, GLP-1 medications have been linked to intestinal tissue death, where parts of the intestine lose blood supply and die. This is an extremely serious complication that requires immediate surgical intervention.</p>
+        
+        <div class="symptoms-list">
+          <h5>Critical Symptoms:</h5>
+          <ul>
+            <li>Severe, sudden abdominal pain</li>
+            <li>Abdominal tenderness and rigidity</li>
+            <li>Fever and chills</li>
+            <li>Rapid heart rate</li>
+            <li>Low blood pressure</li>
+            <li>Signs of shock</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="effects-grid">
+        <div class="effect-card">
+          <h4><a href="intestinal-tissue-death.html">Intestinal Tissue Death Details</a></h4>
+          <p>As reported in multiple cases, requiring surgical removal and permanent ileostomy. Some patients have lost parts of their large intestine.</p>
+          <p><strong>Click for detailed information →</strong></p>
+        </div>
+        
+        <div class="effect-card">
+          <h4>Surgical Consequences</h4>
+          <p>Patients may require removal of dead intestinal tissue, leading to permanent ileostomy bags and significant lifestyle changes.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Notable Case: Juanita Gantt</h3>
+        <p>A 62-year-old patient was hospitalized after taking Wegovy and Ozempic. Parts of her large intestine died and needed to be removed. She now lives with a permanent ileostomy bag and has filed a lawsuit against the manufacturers.</p>
+      </div>
+    </section>
+
+    <!-- Pancreatitis Section -->
+    <section id="pancreatitis">
+      <h2>Pancreatitis</h2>
+      
+      <div class="content-module">
+        <h3>Inflammation of the Pancreas</h3>
+        <p>Pancreatitis is inflammation of the pancreas that can be life-threatening. Studies have shown an increased risk of pancreatitis in patients taking GLP-1 medications compared to other weight loss medications.</p>
+        
+        <div class="symptoms-list">
+          <h5>Pancreatitis Symptoms:</h5>
+          <ul>
+            <li>Severe upper abdominal pain that radiates to the back</li>
+            <li>Nausea and vomiting</li>
+            <li>Fever and rapid pulse</li>
+            <li>Abdominal tenderness</li>
+            <li>Jaundice (yellowing of skin and eyes)</li>
+            <li>Shock in severe cases</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="effects-grid">
+        <div class="effect-card">
+          <h4><a href="pancreatitis.html">Pancreatitis Details</a></h4>
+          <p>Inflammation of the pancreas that can be life-threatening. Studies show increased risk compared to other weight loss medications.</p>
+          <p><strong>Click for detailed information →</strong></p>
+        </div>
+        
+        <div class="effect-card">
+          <h4>Treatment and Recovery</h4>
+          <p>Treatment typically involves hospitalization, IV fluids, pain management, and sometimes surgery. Recovery can take weeks to months.</p>
+        </div>
+      </div>
+
+      <div class="research-box">
+        <h3>Research Evidence</h3>
+        <p>The JAMA study from October 2023 found that GLP-1 users had a 9.09-fold increased risk of pancreatitis compared to users of other weight loss medications. This represents a significant safety concern.</p>
+      </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research">
+      <h2>Research and Studies</h2>
+      
+      <div class="content-module">
+        <h3>Key Research Findings</h3>
+        <p>Multiple studies have documented the serious gastrointestinal risks associated with GLP-1 medications:</p>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">October 2023</div>
+            <h4>JAMA Study</h4>
+            <p>Research published in JAMA found that people taking GLP-1 drugs had higher risk of pancreatitis, bowel obstruction, and gastroparesis compared to other weight loss medications.</p>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">April 2025</div>
+            <h4>Emergency Department Study</h4>
+            <p>Study revealed that an estimated 24,499 people visited emergency departments for adverse events related to semaglutide in just two years following its approval.</p>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">May 2025</div>
+            <h4>Poison Control Data</h4>
+            <p>Pennsylvania and New Jersey poison control centers reported a steep rise in calls related to GLP-1 weight-loss drugs, with exposures jumping from 29 cases in 2021 to 189 in 2024.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-module">
+        <h3>FDA Monitoring</h3>
+        <p>The FDA continues to monitor adverse event reports and has issued several warnings about GLP-1 medications. The agency has received thousands of reports of serious gastrointestinal complications, including:</p>
+        
+        <ul>
+          <li><strong>Gastroparesis:</strong> Over 1,000 reports of stomach paralysis</li>
+          <li><strong>Bowel Obstruction:</strong> Hundreds of cases requiring emergency surgery</li>
+          <li><strong>Pancreatitis:</strong> Multiple reports of life-threatening inflammation</li>
+          <li><strong>Intestinal Death:</strong> Cases requiring surgical removal of dead tissue</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Legal Help Section -->
+    <section id="legal">
+      <h2>Legal Help for GI Complications</h2>
+      
+      <div class="content-module">
+        <h3>Your Legal Rights</h3>
+        <p>If you or a loved one has experienced serious gastrointestinal complications from GLP-1 medications, you may be entitled to compensation. Our legal team specializes in pharmaceutical litigation and can help you understand your options.</p>
+        
+        <div class="effects-grid">
+          <div class="effect-card">
+            <h4>Free Case Evaluation</h4>
+            <p>We offer confidential consultations to assess your case and determine if you have a valid claim for compensation.</p>
+          </div>
+          
+          <div class="effect-card">
+            <h4>No Upfront Costs</h4>
+            <p>We work on a contingency fee basis - you only pay if we win your case. No upfront costs or fees.</p>
+          </div>
+          
+          <div class="effect-card">
+            <h4>Nationwide Representation</h4>
+            <p>We serve clients across the United States and have experience with GLP-1 litigation cases.</p>
+          </div>
+          
+          <div class="effect-card">
+            <h4>Experienced Attorneys</h4>
+            <p>Our team has successfully handled pharmaceutical litigation cases and understands the complex medical issues involved.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Current Litigation Status</h3>
+        <p>As of June 2025, there are 1,882 active lawsuits consolidated in the GLP-1 MDL (Multidistrict Litigation) in the Eastern District of Pennsylvania. Many of these cases involve serious gastrointestinal complications.</p>
+      </div>
+
+      <div class="content-module">
+        <h3>Types of Compensation Available</h3>
+        <p>If your case is successful, you may be entitled to compensation for:</p>
+        
+        <ul>
+          <li><strong>Medical Expenses:</strong> Past and future medical costs related to your injury</li>
+          <li><strong>Lost Wages:</strong> Income lost due to inability to work</li>
+          <li><strong>Pain and Suffering:</strong> Physical and emotional distress</li>
+          <li><strong>Punitive Damages:</strong> In cases of gross negligence or misconduct</li>
+          <li><strong>Loss of Quality of Life:</strong> Permanent lifestyle changes and limitations</li>
+        </ul>
+        
+        <p><strong>Call us today at 800-553-8082 for a free, confidential consultation to discuss your case.</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p>📞 Free Case Evaluation: 800-553-8082</p>
+        <p>📍 Serving clients nationwide</p>
+        <p>⏰ Available 24/7 for consultations</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Legal Services</h3>
+        <p><a href="#">Product Liability</a></p>
+        <p><a href="#">Mass Torts</a></p>
+        <p><a href="#">Pharmaceutical Litigation</a></p>
+        <p><a href="#">Personal Injury</a></p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>GI Complications</h3>
+        <p><a href="gastroparesis.html">Gastroparesis</a></p>
+        <p><a href="bowel-obstruction.html">Bowel Obstruction</a></p>
+        <p><a href="intestinal-tissue-death.html">Intestinal Death</a></p>
+        <p><a href="pancreatitis.html">Pancreatitis</a></p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Legal Information</h3>
+        <p><a href="#">Disclaimer</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <p><a href="#">Terms of Service</a></p>
+        <p><a href="#">Attorney Advertising</a></p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 GLP‑1 Side Effects Legal Support. All rights reserved. | Free consultation available.</p>
+      <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+      <p>Please do not include any confidential or sensitive information in a contact form. Submitting a contact form does not create an attorney-client relationship.</p>
+    </div>
+  </footer>
+</body>
+</html> 
