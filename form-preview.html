@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Form Design Preview - GLP-1 Legal Support</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #f7fafc;
+        }
+
+        /* Main section styles */
+        .eligibility-check-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        /* Trust elements styles */
+        .trust-elements {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .case-stats {
+            margin-bottom: 30px;
+        }
+
+        .case-stats h3 {
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+
+        .case-stats strong {
+            color: #2c5282;
+            font-size: 24px;
+        }
+
+        .case-stats p {
+            margin: 10px 0;
+        }
+
+        .legal-credentials {
+            margin-top: 30px;
+        }
+
+        .legal-credentials h3 {
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+
+        .legal-credentials ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .legal-credentials li {
+            margin: 10px 0;
+            color: #2d3748;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .legal-credentials li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+        }
+
+        /* Form container styles */
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .form-container h2 {
+            color: #1a365d;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .urgency-notice {
+            color: #c53030;
+            font-weight: 600;
+            margin: 15px 0;
+            padding: 10px;
+            background: #fff5f5;
+            border-radius: 4px;
+        }
+
+        /* Placeholder for Google Form */
+        .google-form-embed {
+            width: 100%;
+            height: 600px;
+            border: none;
+            margin: 20px 0;
+            background: #f7fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #cbd5e0;
+        }
+
+        .privacy-notice {
+            font-size: 14px;
+            color: #4a5568;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .privacy-notice a {
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+
+        .privacy-notice a:hover {
+            text-decoration: underline;
+        }
+
+        /* FAQ section styles */
+        .faq-preview {
+            grid-column: 1 / -1;
+            margin-top: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .faq-preview h3 {
+            color: #1a365d;
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            margin: 20px 0;
+        }
+
+        .faq-item h4 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .view-more-faq {
+            display: inline-block;
+            margin-top: 20px;
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .view-more-faq:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .eligibility-check-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-elements {
+                order: 2;
+            }
+            
+            .form-container {
+                order: 1;
+            }
+        }
+
+        /* Preview notice */
+        .preview-notice {
+            background: #ebf8ff;
+            color: #2c5282;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-notice">
+        This is a preview of the new form design. The Google Form will be embedded in the placeholder area.
+    </div>
+
+    <section id="contact" class="eligibility-check-section">
+        <div class="trust-elements">
+            <div class="case-stats">
+                <h3>Current Case Statistics</h3>
+                <p><strong>1,882</strong> cases pending in MDL 3094</p>
+                <p><strong>24,499</strong> reported adverse events</p>
+                <p>Updated: August 2025</p>
+            </div>
+            <div class="legal-credentials">
+                <h3>Our Legal Team</h3>
+                <ul>
+                    <li>25+ Years Experience</li>
+                    <li>$500M+ Recovered</li>
+                    <li>No Fee Unless We Win</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h2>Check Your Eligibility - Free Case Review</h2>
+            <p class="urgency-notice">Time-Sensitive: State laws limit your time to file. Act now to protect your rights.</p>
+            
+            <!-- Google Form Placeholder -->
+            <div class="google-form-embed">
+                [Google Form will be embedded here]
+            </div>
+
+            <div class="privacy-notice">
+                <p>Your information is protected by attorney-client privilege. By submitting this form, you agree to our <a href="/privacy-policy">Privacy Policy</a>.</p>
+                <p>Free consultation available. No obligation.</p>
+            </div>
+        </div>
+
+        <div class="faq-preview">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-item">
+                <h4>What compensation might be available?</h4>
+                <p>Potential compensation includes medical expenses, lost wages, pain and suffering, and punitive damages.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How long does the process take?</h4>
+                <p>While each case is unique, our team works efficiently to pursue your claim. Contact us for a timeline estimate.</p>
+            </div>
+            <a href="/faq" class="view-more-faq">View More FAQs →</a>
+        </div>
+    </section>
+</body>
+</html>

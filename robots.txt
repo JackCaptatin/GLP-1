@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /assets/templates/
+Disallow: /legal/admin/
+Disallow: /private/
+
+Sitemap: https://jackcaptatin.github.io/GLP-1/sitemap.xml

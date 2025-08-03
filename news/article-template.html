@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{ARTICLE_TITLE} | GLP-1 Legal News</title>
+    <meta name="description" content="{ARTICLE_DESCRIPTION}">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <!-- Article Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "{ARTICLE_TITLE}",
+        "datePublished": "{PUBLISH_DATE}",
+        "dateModified": "{MODIFY_DATE}",
+        "description": "{ARTICLE_DESCRIPTION}",
+        "author": {
+            "@type": "Organization",
+            "name": "GLP-1 Side Effects Legal Support"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <!-- Include header template -->
+    </header>
+
+    <main class="container">
+        <article class="news-article">
+            <header class="article-header">
+                <h1>{ARTICLE_TITLE}</h1>
+                <div class="article-meta">
+                    <time datetime="{PUBLISH_DATE}">{FORMATTED_DATE}</time>
+                    <span class="category">{CATEGORY}</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                {ARTICLE_CONTENT}
+            </div>
+
+            <footer class="article-footer">
+                <div class="tags">
+                    {TAGS}
+                </div>
+                
+                <div class="share-buttons">
+                    <h3>Share This Article</h3>
+                    <!-- Social sharing buttons -->
+                </div>
+
+                <div class="cta-box">
+                    <h3>Affected by GLP-1 Medications?</h3>
+                    <p>Contact our legal team for a free consultation to understand your rights.</p>
+                    <a href="/case-evaluation.html" class="btn btn-primary">Get Free Case Evaluation</a>
+                </div>
+            </footer>
+        </article>
+
+        <aside class="related-articles">
+            <h2>Related Articles</h2>
+            <div class="article-grid">
+                {RELATED_ARTICLES}
+            </div>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <!-- Include footer template -->
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/analytics.js"></script>
+</body>
+</html>
