@@ -1129,52 +1129,71 @@
     /* Footer */
     /* CTA Section styles */
     .cta-section {
-      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-      color: white;
-      padding: 4rem 0;
+      background: #fff;
+      padding: 3rem 0;
+    }
+
+    .cta-card {
+      background: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
       text-align: center;
-      margin-top: 4rem;
     }
 
-    .cta-section h2 {
-      color: white;
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
+    .cta-card h2 {
+      color: #1e293b;
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 2.2rem;
+      text-align: center;
+      position: relative;
+      padding-bottom: 1.1rem;
+      line-height: 1.18;
     }
 
-    .cta-section .section-intro {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto 2rem;
+    .cta-card h2::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: #1e40af;
+      border-radius: 2px;
+      margin: 1.1rem auto 0 auto;
+      position: absolute;
+      left: 0;
+      bottom: 0;
     }
 
-    .cta-buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
+    .cta-card p {
+      color: #334155;
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
     }
 
-    .cta-buttons .cta-button {
+    .cta-btn {
+      display: inline-block;
       background: #dc2626;
-      color: white;
-      padding: 1rem 2rem;
+      color: #fff;
+      font-weight: 700;
+      padding: 0.9rem 2.2rem;
       border-radius: 8px;
-      font-size: 1.25rem;
-      font-weight: 600;
+      font-size: 1.1rem;
       text-decoration: none;
-      transition: all 0.3s ease;
+      margin-bottom: 1.2rem;
+      transition: background 0.2s;
     }
-
-    .cta-buttons .cta-button:hover {
+    .cta-btn:hover {
       background: #b91c1c;
-      transform: translateY(-2px);
     }
 
-    .cta-buttons .cta-note {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 1rem;
+    .cta-note {
+      color: #64748b;
+      font-size: 0.98rem;
+      margin-top: 0.5rem;
     }
 
     footer {
@@ -1887,13 +1906,11 @@
 
     <!-- Contact CTA Section -->
     <section id="contact" class="cta-section">
-      <div class="container">
+      <div class="cta-card">
         <h2>Get Your Free Case Evaluation</h2>
-        <p class="section-intro">If you have been affected by GLP-1 medications, our legal team is ready to help. Take the first step towards justice today.</p>
-        <div class="cta-buttons">
-          <a href="/case-evaluation.html" class="cta-button">Start Your Free Case Review →</a>
-          <p class="cta-note">No fee unless we win your case. Confidential consultation available 24/7.</p>
-        </div>
+        <p>If you have been affected by GLP-1 medications, our legal team is ready to help. Take the first step towards justice today.</p>
+        <a href="/case-evaluation.html" class="cta-btn">Start Your Free Case Review →</a>
+        <div class="cta-note">No fee unless we win your case. Confidential consultation available 24/7.</div>
       </div>
     </section>
   </main>
